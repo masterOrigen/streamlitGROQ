@@ -5,7 +5,7 @@ from typing import Generator
 from groq import Groq
 
 _ = load_dotenv(find_dotenv())
-st.set_page_config(page_icon="📃", layout="wide", page_title="Groq & LLaMA3 Chat Bot...")
+st.set_page_config(page_icon="📃", layout="wide", page_title="LLaMA3 Chat Bot...")
 
 
 def icon(emoji: str):
@@ -18,7 +18,7 @@ def icon(emoji: str):
 
 # icon("⚡️")
 
-st.subheader("Groq Chat with LLaMA3 App", divider="rainbow", anchor=False)
+st.subheader("Chat Llama 3", divider="rainbow", anchor=False)
 
 client = Groq(
     api_key=os.environ['GROQ_API_KEY'],
@@ -50,7 +50,7 @@ col1, col2 = st.columns([1, 3])  # Adjust the ratio to make the first column sma
 
 with col1:
     model_option = st.selectbox(
-        "Choose a model:",
+        "Selecciona un Modelo:",
         options=list(models.keys()),
         format_func=lambda x: models[x]["name"],
         index=0,  # Default to the first model in the list
@@ -71,7 +71,7 @@ if st.session_state.selected_model != model_option:
     st.session_state.selected_model = model_option
 
 # Add a "Clear Chat" button
-if st.button("Clear Chat"):
+if st.button("Limpiar Chat"):
     st.session_state.messages = []
     
 # Display chat messages from history on app rerun
