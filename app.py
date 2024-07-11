@@ -62,7 +62,7 @@ with col1:
         max_value=max_tokens_range,
         value=min(32768, max_tokens_range),
         step=512,
-        help=f"Adjust the maximum number of tokens (words) for the model's response. Max for selected model: {max_tokens_range}",
+        help=f"Ajuste la cantidad máxima de tokens (palabras) para la respuesta del modelo. Máximo para el modelo seleccionado: {max_tokens_range}",
     )
 
 # Detect model change and clear chat history if model has changed
