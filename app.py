@@ -50,7 +50,7 @@ col1, col2 = st.columns([1, 3])  # Adjust the ratio to make the first column sma
 
 with col1:
     model_option = st.selectbox(
-        "Selecciona un Modelo:",
+        "SELECCIONA EL MODELO DE CHAT:",
         options=list(models.keys()),
         format_func=lambda x: models[x]["name"],
         index=0,  # Default to the first model in the list
